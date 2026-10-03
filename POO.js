@@ -33,27 +33,28 @@ let Jogadores = [
   new Meia('Bellingham', 25, 'Real Madrid', 'Meia'),
   new Ponta('Kylian Mbappe', 26, 'Real Madrid', 'Ponta')
 
-] 
+]
 let js = JSON.stringify(Jogadores)
 console.log(js)
 console.log('________________________________________________________')
 console.log('JOGADORES:')
+//exibindo lista do array de objetos, usando for 
 for ({
   nome, idade, equipa, posicao
 } of Jogadores) {
   console.log(`nome:${nome} \n idade: ${idade} \n equipa: ${equipa} \n posicao: ${posicao}`)
   console.log('==============================================')
 }
-
+//exibindo os menores do array de objetos 
 console.log('JOGADOR MAIS NOVO')
-let obj = Jogadores.reduce((ac,n) => n.idade < ac.idade ? n : ac)
-  for (let c in obj) {
-    console.log(`${c} : ${obj[c]}`)
-  } 
-  
-let ob = Jogadores.reduce((ac,n) => n.idade > ac.idade ? n : ac) 
+let obj = Jogadores.reduce((ac, n) => n.idade < ac.idade ? n: ac)
+for (let c in obj) {
+  console.log(`${c} : ${obj[c]}`)
+}
+//exibindo o mais velho do array 
+let ob = Jogadores.reduce((ac, n) => n.idade > ac.idade ? n: ac)
 console.log("===================================")
-console.log("JOGADOR MAIS VELHO") 
-for(let i in ob ){ 
+console.log("JOGADOR MAIS VELHO")
+for (let i in ob) {
   console.log(`${i} : ${ob[i]}`)
-} 
+}

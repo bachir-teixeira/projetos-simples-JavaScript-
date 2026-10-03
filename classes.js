@@ -6,10 +6,13 @@ class Jogador {
 }
 
 /*
+//AO INVES DE :: 
 let Jogadores = [
   new Jogador('CR7', 'All Nasar'),
   new Jogador('M10','I.Miami')
-  ]
+  ] 
+  
+  Fiz:
   */
 
 let opc = ['nome', 'equipa']
